@@ -22,10 +22,12 @@ DugumPointer yeniDugum(int veri){
 
 
 int main() {
-    
+   
     DugumPointer n1,n2;
     n1 = yeniDugum(10);
     n2 = yeniDugum(20);
+    
+    // Dugumu test etmek icin degerlerin ekrana bastirilmasi
     printf("%d\n",n1->data);
     printf("%p\n",n1->ileri);
     printf("%d\n",n2->data);
