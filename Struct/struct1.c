@@ -16,16 +16,14 @@ typedef struct
 
 int main()
 {
-    takim galatasaray;
-    strcpy(galatasaray.takimAdi,"Galatasaray");
-    galatasaray.kurulus = 1905;
-
-
     futbolcu footballer;
-    strcpy(footballer.adSoyad,"Elmar Suleymanov");
-    footballer.yas = 46;
-    footballer.team = galatasaray;
+    strcpy(footballer.adSoyad," Sabir Suleymanli");
+    footballer.yas = 21;
+    strcpy(footballer.team.takimAdi,"Bursaspor");
+    footballer.team.kurulus = 1965;
 
     printf("Bilgiler: %s %d", footballer.team.takimAdi,footballer.team.kurulus);
+
+
     return 0;
 }

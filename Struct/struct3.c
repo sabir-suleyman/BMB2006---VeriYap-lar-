@@ -11,21 +11,20 @@ typedef struct
 {
     char adSoyad[30];
     int yas;
-    takim team;    // Struct icinde struct kullandik
+    takim *team;    // Pointer kullanmak
 } futbolcu;
 
 int main()
 {
-    takim galatasaray;
-    strcpy(galatasaray.takimAdi,"Galatasaray");
-    galatasaray.kurulus = 1905;
+    takim *chelsea = (takim *)malloc(sizeof(takim));
+    strcpy(chelsea->takimAdi,"Chelsea");
+    chelsea->kurulus = 1855;
 
+     futbolcu hazard;
+     strcpy(hazard.adSoyad, "Eden Hazard");
+     hazard.yas = 28;
+     hazard.team = chelsea;
 
-    futbolcu footballer;
-    strcpy(footballer.adSoyad,"Elmar Suleymanov");
-    footballer.yas = 46;
-    footballer.team = galatasaray;
-
-    printf("Bilgiler: %s %d", footballer.team.takimAdi,footballer.team.kurulus);
+     printf("Bilgiler: %s %d", hazard.team->takimAdi, hazard.team->kurulus); 
     return 0;
 }
