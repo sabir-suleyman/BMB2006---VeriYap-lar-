@@ -131,10 +131,8 @@ int main()
     addNodetoTail(15);
     addNodetoTail(20);
 
-    addNodetoHead(25);
-    addNodetoHead(30);
-    addNodetoHead(35);
-    addNodetoHead(40);  
+    addNodetoHead(25); addNodetoHead(30);
+    addNodetoHead(35); addNodetoHead(40);  
 
     addNodetoTail(45);
     addNodetoTail(50);
@@ -144,6 +142,12 @@ int main()
     removeNode(40);   // Listenin basindan silelim
     removeNode(15);   // Liste ortalarindan silelim
     removeNode(50);   // Liste sonundan silelim
+    removeNode(100);  // Listede bulunmayan elemani deneyelim
+
+    // Simdi de listedeki tum elemanlari silelim
+    removeNode(35); removeNode(30);
+    removeNode(25); removeNode(10);
+    removeNode(20); removeNode(45);
 
     printf("\nGuncel ");
     printList();
